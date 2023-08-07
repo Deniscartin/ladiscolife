@@ -1,0 +1,109 @@
+.discoList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+.discoItem {
+  width: 190px;
+  height: 254px;
+  background: #07182E;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  border: 10px white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.discoItem::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  background-image: linear-gradient(180deg, rgb(0, 119, 255), rgb(255, 48, 255), rgb(241, 222, 241));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+      transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.discoItem::after {
+  content: '';
+  position: absolute;
+  background: #07182E;
+  inset: 5px;
+  border-radius: 15px;
+}
+
+.discoItem h3 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+  order: 2;
+
+}
+
+.discoImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  z-index: 10;
+  order: 1;
+
+}
+
+.discoItem p {
+  font-size: 1rem;
+  color: #555;
+  order: 3;
+  z-index: 1;
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .discoList {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0.1rem;
+      display: flex;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+
+  .discoItem {
+      flex: 0 0 200px;
+      margin-right: 10px;
+  }
+
+  .discoImage {
+      width: 100%;
+      height: 120px;
+  }
+
+  .discoItem h3 {
+      font-size: 1.3rem;
+  }
+
+  .discoItem p {
+      font-size: 0.5rem;
+  }
+}

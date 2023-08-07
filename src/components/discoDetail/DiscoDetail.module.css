@@ -1,0 +1,140 @@
+/* DiscoDetail.module.css */
+
+.discoDetail {
+    display: flex;
+    border-radius: 8px;
+    padding: 1.5rem;
+
+    color: #ffffff;
+    flex-direction: column;
+  }
+  
+  .leftColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 2rem;
+  }
+  
+  .rightColumn {
+    flex: 1;
+    padding-left: 2rem;
+
+  }
+  
+  .discoImageContainer {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+  }
+  
+  .discoImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .discoName {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .discoCategory {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .discoAddress {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Stili per Pacchetti Ingresso VIP */
+  .vipPackages {
+    margin-top: 2rem;
+    
+  }
+  
+  .vipHeading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .vipPackage {
+    margin-bottom: 1rem;
+  }
+  
+  .vipPackageCard {
+    display: block;
+    border: 2px solid #0077cc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: #cfa2ff;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .vipPackageCard:hover {
+    background-color: rgba(0, 119, 204, 0.1);
+  }
+  
+  .vipPackage h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .vipPackage p {
+    font-size: 1.6rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .discoDetail {
+      padding: 1rem; /* Riduci il padding */
+    }
+  
+    .leftColumn,
+    .rightColumn {
+      flex: 1;
+      padding-left: 0; /* Rimuovi il padding sinistro */
+    }
+  
+    .discoImageContainer {
+      max-width: 100%; /* Occupa tutta la larghezza disponibile */
+      margin-bottom: 1rem;
+    }
+  
+    .discoImage {
+      height: 150px; /* Riduci l'altezza dell'immagine */
+    }
+  
+    .discoName {
+      font-size: 1.5rem; /* Riduci la dimensione del nome */
+    }
+  
+    .discoCategory {
+      font-size: 0.7rem; /* Riduci la dimensione della categoria */
+    }
+  
+    .discoAddress {
+      font-size: 0.8rem; /* Riduci la dimensione dell'indirizzo */
+    }
+  
+    .vipHeading {
+      font-size: 1.6rem; /* Riduci la dimensione dell'intestazione VIP */
+    }
+  
+    .vipPackage h4 {
+      font-size: 1.4rem; /* Riduci la dimensione del titolo del pacchetto VIP */
+    }
+  
+    .vipPackage p {
+      font-size: 1rem; /* Riduci la dimensione del testo del pacchetto VIP */
+    }
+  }
